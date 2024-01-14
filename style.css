@@ -1,0 +1,85 @@
+* {
+  text-align: center;
+  font-weight: bolder;
+  border: 2px black solid;
+}
+
+.container {
+  border: 2px black solid;
+  height: 80vh;
+  width: 100vw;
+
+  display: grid;
+  grid-template-rows: 15% 60% 25%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "main main aside1"
+    "footer footer footer";
+}
+
+.header {
+  background-color: #cfdeeb;
+  grid-area: header;
+}
+
+.main {
+  background-color: rgb(248, 248, 120);
+  grid-area: main;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  grid-template-areas:
+    "section0 section0"
+    "section1 section2"
+    "section3 section3";
+}
+
+.section0,
+.section1,
+.section2,
+.section3 {
+  background-color: blanchedalmond;
+  margin: 10px;
+}
+.section0 {
+  background-color: rgb(248, 248, 120);
+  grid-area: section0;
+}
+
+.section1 {
+  grid-area: section1;
+}
+
+.section2 {
+  grid-area: section2;
+}
+
+.section3 {
+  grid-area: section3;
+}
+
+.asaid1 {
+  display: grid;
+  background-color: #54e051;
+  /*почему не окрашен*/
+  grid-area: asaid1;
+  color: blueviolet;
+}
+
+.footer {
+  display: grid;
+  grid-area: footer;
+  grid-template-columns: 20% 20% 20% 20%;
+  justify-content: space-around;
+  align-content: center;
+  background-color: darkolivegreen;
+}
+
+.footer1 {
+  background-color: rgb(235, 235, 245);
+  color: rgb(12, 5, 5);
+  width: 20vw;
+  height: 10vh;
+  padding-top: 50px;
+}
